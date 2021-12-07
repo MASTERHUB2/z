@@ -655,7 +655,7 @@ do
 		end)
 	end
 	
-	function section:addButton(title, callback)
+	function section:Button(title, callback)
 		local button = utility:Create("ImageButton", {
 			Name = "Button",
 			Parent = self.container,
@@ -716,9 +716,9 @@ do
 	end
 
 
-	function section:addLabelButton(title, callback)
+	function section:Label(title)
 		local button = utility:Create("ImageButton", {
-			Name = "LabelButton",
+			Name = "Title",
 			Parent = self.container,
 			BackgroundTransparency = 1,
 			BorderSizePixel = 0,
@@ -752,7 +752,7 @@ do
 	end
 
 
-	function section:addToggle(title, default, callback)
+	function section:Toggle(title, default, callback)
 		local toggle = utility:Create("ImageButton", {
 			Name = "Toggle",
 			Parent = self.container,
@@ -1562,7 +1562,7 @@ do
 		return colorpicker
 	end
 	
-	function section:addSlider(title, default, min, max, callback)
+	function section:Slider(title, default, min, max, callback)
 		local slider = utility:Create("ImageButton", {
 			Name = "Slider",
 			Parent = self.container,
@@ -1713,7 +1713,7 @@ do
 		return slider
 	end
 	
-	function section:addDropdown(title, list, callback)
+	function section:Dropdown(title, list, callback)
 		local dropdown = utility:Create("Frame", {
 			Name = "Dropdown",
 			Parent = self.container,
