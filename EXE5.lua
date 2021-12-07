@@ -730,7 +730,7 @@ do
 			SliceCenter = Rect.new(2, 2, 298, 298)
 		}, {
 			utility:Create("TextLabel", {
-				Name = "Title",
+				Name = "Title2",
 				BackgroundTransparency = 1,
 				Size = UDim2.new(1, 0, 1, 0),
 				ZIndex = 3,
