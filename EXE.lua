@@ -718,7 +718,7 @@ do
 
 	function section:addLabelButton(title, callback)
 		local button = utility:Create("ImageButton", {
-			Name = "Button",
+			Name = "LabelButton",
 			Parent = self.container,
 			BackgroundTransparency = 1,
 			BorderSizePixel = 0,
@@ -747,31 +747,6 @@ do
 		
 		local text = button.Title
 		local debounce
-		
-		button.MouseButton1Click:Connect(function()
-			
-			if debounce then
-				return
-			end
-			
-			-- animation
-			utility:Pop(button, 10)
-			
-			debounce = true
-			text.TextSize = 0
-			utility:Tween(button.Title, {TextSize = 14}, 0.2)
-			
-			wait(0.2)
-			utility:Tween(button.Title, {TextSize = 12}, 0.2)
-			
-			if callback then
-				callback(function(...)
-					self:updateButton(button, ...)
-				end)
-			end
-			
-			debounce = false
-		end)
 		
 		return button
 	end
